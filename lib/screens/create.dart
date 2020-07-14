@@ -8,25 +8,19 @@ class CreatePage extends StatefulWidget {
 class _CreatePageState extends State<CreatePage> {
   var _pageController = PageController();
 
-  Widget pageView() {
-    return PageView(
-      controller: _pageController,
-      children: <Widget>[
-        Container(color: Colors.red),
-        Container(color: Colors.orange),
-        Container(color: Colors.yellow),
-      ],
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          pageView(),
-        ],
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return PageView(
+          controller: _pageController,
+          children: <Widget>[
+            Container(color: Colors.red),
+            Container(color: Colors.orange),
+            Container(color: Colors.yellow),
+          ],
+        );
+      },
     );
   }
 }
