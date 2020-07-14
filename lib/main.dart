@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'screens/history.dart';
 import 'screens/home.dart';
 import 'screens/info.dart';
@@ -112,6 +113,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
     return Scaffold(
       appBar: appBar(),
       bottomNavigationBar: navBar(),
