@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:giraffe/common/theme.dart';
 import 'screens/history.dart';
-import 'screens/home.dart';
+import 'screens/overview.dart';
 import 'screens/info.dart';
 import 'screens/create.dart';
 import 'router.dart';
@@ -15,10 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Giraffe',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: giraffeTheme,
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (_) => MainPage(title: 'Giraffe'),
@@ -59,26 +58,26 @@ class _MainPageState extends State<MainPage> {
         BottomNavigationBarItem(
           icon: Icon(
             Icons.terrain,
-            semanticLabel: "overview",
+            semanticLabel: "Visão Geral",
             size: _iconSize,
           ),
-          title: Text("Overview"),
+          title: Text("Visão Geral"),
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.history,
-            semanticLabel: "history",
+            semanticLabel: "Seu diário",
             size: _iconSize,
           ),
-          title: Text("History"),
+          title: Text("Seu diário"),
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.help_outline,
-            semanticLabel: "How to",
+            semanticLabel: "Como usar?",
             size: _iconSize,
           ),
-          title: Text("How to"),
+          title: Text("Como usar?"),
         ),
       ],
       onTap: selectPage,

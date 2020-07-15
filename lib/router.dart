@@ -9,12 +9,13 @@ const String editRoute = '/edit';
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case mainRoute:
-        return MaterialPageRoute(builder: (_) => MainPage());
       case createRoute:
         return MaterialPageRoute(builder: (_) => CreatePage());
       case editRoute:
         return MaterialPageRoute(builder: (_) => CreatePage());
+      case mainRoute:
+      default:
+        return MaterialPageRoute(builder: (_) => MainPage());
     }
   }
 }

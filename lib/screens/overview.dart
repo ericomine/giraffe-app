@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HistoryPage extends StatefulWidget {
+class OverviewPage extends StatefulWidget {
   @override
-  _HistoryPageState createState() => _HistoryPageState();
+  _OverviewPageState createState() => _OverviewPageState();
 }
 
-class _HistoryPageState extends State<HistoryPage> {
+class _OverviewPageState extends State<OverviewPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
