@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^0.17.4
+  flutter_markdown: ^0.4.2
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +25,9 @@ flutter:
     - assets/graphics/feelings.jpg
     - assets/graphics/needs.jpg
     - assets/graphics/request.jpg
+    - assets/graphics/diagram-nvc.png
+    - assets/graphics/diagram-bad.png
+    - assets/markdown/howto.md
 
   fonts:
     - family: Inter Sans

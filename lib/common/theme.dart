@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 final giraffeTextTheme = TextTheme(
   headline5: TextStyle(fontSize: 28, fontWeight: FontWeight.w400),
   headline6: TextStyle(fontSize: 18),
-  bodyText2: TextStyle(fontSize: 12),
+  bodyText2: TextStyle(fontSize: 14),
 );
 
 final giraffeTheme = ThemeData(

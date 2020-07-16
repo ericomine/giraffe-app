@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:giraffe/common/theme.dart';
 import 'screens/history.dart';
 import 'screens/overview.dart';
-import 'screens/info.dart';
+import 'screens/howto.dart';
 import 'screens/create.dart';
 import 'router.dart';
 
@@ -14,6 +14,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+
     return MaterialApp(
       title: 'Giraffe',
       theme: giraffeTheme,
@@ -93,7 +95,7 @@ class _MainPageState extends State<MainPage> {
   Widget body() {
     switch (_selectedPage) {
       case 2:
-        return InfoPage();
+        return HowtoPage();
       case 1:
         return HistoryPage();
       case 0:
